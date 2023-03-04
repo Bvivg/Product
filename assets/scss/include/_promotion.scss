@@ -1,0 +1,57 @@
+.promotion {
+  margin: 50px 200px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px;
+  background: $color-green-250;
+  border-radius: 32px;
+  justify-content: space-between;
+
+  &__desc-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__desc {
+    font-weight: 600;
+    font-size: 32px;
+    color: $color-white-50;
+  }
+
+  &__btn {
+    box-sizing: border-box;
+    width: max-content;
+    padding: 15px 35px;
+    background: $color-white-50;
+    color: $color-green-250;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 8px;
+    border: solid 1px $color-white-50;
+    transition: .6s all;
+
+    &:hover{
+      background: $color-green-250;
+      color: $color-white-50;
+    }
+  }
+
+  &__img {
+    max-width: 420px;
+  }
+  &__img img{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 920px) {
+  .promotion {
+    justify-content: center;
+    margin: 30px;
+    padding: 20px;
+  }
+}

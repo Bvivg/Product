@@ -1,0 +1,114 @@
+.footer {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 35px;
+  align-items: flex-start;
+
+  &__logo {
+    width: 160px;
+  }
+
+  &__share-icons {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__send {
+    max-width: 385px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__comment-area {
+    border: 1px solid $color-blue-50;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: start;
+  }
+
+  &__column {
+    display: flex;
+    gap: 3px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: $color-gray-150;
+  }
+
+  &__nav {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    gap: 150px;
+  }
+
+  &__bg {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  &__feedback-btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 5px 15px;
+    width: max-content;
+    background: $color-green-250;
+    color: $color-white-50;
+    border-radius: 4px;
+  }
+}
+
+.share {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media screen and (max-width: 920px) {
+  .footer {
+    margin-top: 20px;
+    gap: 50px;
+    flex-direction: column;
+
+    &__nav {
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__comment-area {
+      width: 100%;
+    }
+  }
+
+  .feedback {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}

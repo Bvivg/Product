@@ -1,0 +1,114 @@
+.comments {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__content {
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto;
+
+    h2 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 48px;
+      color: #22343D;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 26px;
+      color: #22343D;
+      margin-top: 20px;
+    }
+  }
+
+  &-list {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: -99;
+
+    p {
+      background: #FFFFFF;
+      box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
+      border-radius: 26.5px;
+      padding: 15px 40px;
+      position: relative;
+      box-sizing: border-box;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 30px;
+        bottom: -7px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #fff;
+      }
+    }
+
+    img {
+      max-width: 100px;
+    }
+  }
+
+  &-btn {
+    display: inline-block;
+    max-width: max-content;
+    margin: 0 auto;
+    margin-top: 48px;
+    text-align: center;
+    padding: 15px 30px;
+    background: $color-green-250;
+    border: solid 1px $color-green-250;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-white-50;
+    transition: .6s all;
+
+    &:hover{
+      background: $color-white-50;
+      color: $color-green-250;
+    }
+  }
+}
+
+
+@media screen and (max-width: 920px) {
+  .comments-list {
+    flex-direction: column;
+
+    .comments-item {
+      flex-direction: column;
+      flex-direction: revert-layer;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .comments-list {
+    .comments-item {
+      flex-direction: column;
+    }
+
+    .revert {
+      flex-direction: column-reverse;
+    }
+  }
+}
